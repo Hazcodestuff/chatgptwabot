@@ -1,7 +1,3 @@
+name: whatsapp-bot
 build:
-  hello-world:
-     image: okteto.dev/hello-world:latest
-     context: .
-     dockerfile: Dockerfile
-deploy:
-  - index.js
+  dockerfile: Dockerfile
