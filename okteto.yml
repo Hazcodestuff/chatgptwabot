@@ -1,7 +1,11 @@
-build:
-  hello-world:
-     image: okteto.dev/hello-world:latest
-     context: .
-     dockerfile: Dockerfile
+name: whatsapp-bot
 deploy:
-  - index.js apply -f k8s
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+build:
+  dockerfile: Dockerfile
+forward:
+  - port 3000
