@@ -8,4 +8,4 @@ deploy:
 build:
   dockerfile: Dockerfile
 forward:
-  - 80:80/tcp
+  - 80:80
