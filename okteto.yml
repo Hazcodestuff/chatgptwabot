@@ -1,3 +1,4 @@
 name: whatsapp-bot
 build:
   dockerfile: Dockerfile
+command: ["node", "index.js"]
